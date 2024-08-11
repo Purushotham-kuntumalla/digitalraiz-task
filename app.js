@@ -3,13 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupOverlay = document.getElementById('popup-overlay');
     const popupClose = document.getElementById('popup-close');
     const popupBox = document.querySelector('.popup-box');
+    const services = document.getElementById('dropdown');
 
+    services.style.display = 'none'
     // Show the popup when the page loads
     popupOverlay.style.display = 'flex';
 
     // Close the popup when the X button is clicked
     popupClose.addEventListener('click', () => {
         popupOverlay.style.display = 'none';
+        services.style.display = 'flex'
     });
 
     // Close the popup when clicking outside the popup box
@@ -17,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Check if the click was outside the popup box
         if (event.target === popupOverlay) {
             popupOverlay.style.display = 'none';
+            
         }
     });
 });
