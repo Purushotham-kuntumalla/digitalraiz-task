@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Check if the click was outside the popup box
         if (event.target === popupOverlay) {
             popupOverlay.style.display = 'none';
-            services.style.display = 'flex'
-        }
+            services.style.display = 'flex';
+        };
     });
 });
 const dropdowns = document.querySelectorAll(".dropdown");
